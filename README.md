@@ -12,4 +12,4 @@ CREATE TABLE `cars`.`car` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT
 
 # table comment
 
-CREATE TABLE `cars`.`comment` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `content` TEXT NOT NULL , `createdAt` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+CREATE TABLE `cars`.`comment` ( `id` INT NOT NULL AUTO_INCREMENT , `car_id` INT NOT NULL , `user_id` INT NOT NULL , `content` TEXT NOT NULL , `createdAt` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

@@ -7,8 +7,7 @@ const router = express.Router();
 router.get('/getCars', auth(), async (req: any, res) => {
     let response: ApiCarsResponse = { success: false, cars: [] };
     try {
-        console.log('getCars');
-        if (req.use) {
+        if (req.user) {
             console.log('user', req.user);
             console.log('**if**');
         } else {
