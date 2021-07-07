@@ -1,5 +1,5 @@
 import * as mysql from 'mysql';
-import { Car } from 'src/models/Car';
+import { Car } from './../models/Car';
 import * as dao from './dao';
 
 /**

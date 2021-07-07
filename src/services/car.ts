@@ -2,7 +2,7 @@ import { ApiCarsResponse } from './../models/ApiResponse';
 import * as functions from './../functions';
 import * as dasCar from './../dao/car';
 import * as daoComment from './../dao/comment';
-import { Car } from 'src/models/Car';
+import { Car } from './../models/Car';
 
 export class CarService {
     /**
