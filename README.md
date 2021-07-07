@@ -1,6 +1,6 @@
 # cars
 
-APIs permettant géré des voitures
+APIs to manage car / user / comments
 
 ## technology used
 
