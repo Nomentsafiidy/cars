@@ -1,4 +1,3 @@
-// user.ts
 import * as express from 'express';
 import { auth } from './../middleware/authorization';
 import { ApiCarsResponse } from './../models/ApiResponse';

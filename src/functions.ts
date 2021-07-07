@@ -62,3 +62,12 @@ export function endConnection(force: boolean = true) {
 export async function checkPassword(passwordPlain: string, passwordEncrypted: string): Promise<boolean> {
     return bcrypt.compare(passwordPlain, passwordEncrypted);
 }
+
+/**
+ *
+ * @param passwordPlain
+ * @returns (Promise<string>)
+ */
+export async function hashPassword(passwordPlain: string): Promise<string> {
+    return bcrypt.hash(passwordPlain, 10);
+}
