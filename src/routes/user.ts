@@ -7,7 +7,7 @@ const router = express.Router();
  * @param req.body.user : (user)
  * @body provider: (string) JSON of a provider object
  */
-router.post('/addProvider', async (req, res) => {
+router.post('/addUser', async (req, res) => {
     let response: ApiResponse = { success: false };
     try {
         if (req.body && req.body.user) {

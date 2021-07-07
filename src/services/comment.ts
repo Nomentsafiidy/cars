@@ -1,20 +1,19 @@
 import { ApiResponse } from './../models/ApiResponse';
 import * as functions from './../functions';
-import * as dasUser from './../dao/user';
-import { User } from './../models/User';
+import * as dasComment from './../dao/comment';
+import { Comment } from './../models/Comment';
 
-export class UserService {
+export class CommentService {
     /**
      * addUser
      * @param auth: (boolean) when user is authenticate
      * @return (Promise<ApiCarsResponse>)
      */
-    addUser = async (user: User): Promise<ApiResponse> => {
+    addComment = async (comment: Comment): Promise<ApiResponse> => {
         const connection = functions.getConnection();
         const response: ApiResponse = { success: false };
-        if (user.name && user.email && user.password) {
-            user.password = await functions.hashPassword(user.password);
-            const [success, error, res] = await dasUser.insertUser(connection, user);
+        if (comment.user_id && comment.car_id && comment.content) {
+            const [success, error, res] = await dasComment.insertComment(connection, comment);
             if (res && res.affectedRows === 1 && res.insertId) {
                 response.success = true;
             }
@@ -25,4 +24,4 @@ export class UserService {
     };
 }
 
-export const userService = new UserService();
+export const commentService = new CommentService();

@@ -19,7 +19,7 @@ export class CarService {
                 let carsTmp: Car[] = [];
                 for (let i = 0; i < cars.length; i++) {
                     const car = new Car(cars[i]);
-                    const comments = await daoComment.selectCar(connection, `car_id = ${car.id}`);
+                    const comments = await daoComment.selectComment(connection, `car_id = ${car.id}`);
                     if (comments) {
                         car.comments = [];
                     }
